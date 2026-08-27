@@ -139,7 +139,7 @@
       nav { display: none; } .menu-button { display: block; }
       header.menu-open nav { display: flex; position: absolute; top: calc(100% + 1px); left: 14px; right: 14px; padding: 12px 20px; flex-direction: column; align-items: stretch; gap: 0; background: var(--white); box-shadow: 0 17px 32px -25px rgba(21,23,25,.65); }
       header.menu-open nav a { padding: 13px 0; border-bottom: 1px solid var(--line); } header.menu-open nav a:last-child { border-bottom: 0; }
-      .hero { align-items: end; min-height: 100svh; } .hero-picture img { content: url('https://3000-isb56fe6vwmdcm95ktqus-e837c1a8.us3.manus.computer/manus-storage/dra-mariana-hero-mobile_64412812.png'); object-position: center; }
+      .hero { align-items: end; min-height: 100svh; } .hero-picture img { content: url('assets/mariana-hero-mobile.webp'); object-position: center; }
       .hero::after { background: linear-gradient(180deg, rgba(247,246,242,.70) 0%, rgba(247,246,242,.54) 38%, rgba(247,246,242,.12) 63%, rgba(21,23,25,.08) 100%); }
       .hero-content { padding: 114px 0 58px; } .hero h1 { max-width: 8.8ch; font-size: clamp(50px, 15vw, 78px); } .hero-copy { max-width: 32ch; margin-top: 16px; font-size: 13px; line-height: 1.72; }
       .hero-actions { margin-top: 25px; } .button { min-height: 46px; padding: 0 18px; font-size: 9px; } .hero-register { margin-top: 24px; font-size: 8.5px; } .scroll-note { display: none; }
@@ -193,6 +193,20 @@
     .button-primary:hover { color: var(--white); }
     .hero { --cover-blue: #2f6683; }
     .hero .eyebrow, .hero h1, .hero h1 em, .hero-copy, .hero-copy p, .hero-register { color: var(--cover-blue); }
+
+    /* Ajuste de capa: hierarquia menor, composição mais à esquerda e foto mais visível. */
+    .hero-content { width: min(100% - 10vw, 1280px); }
+    .hero h1 { max-width: 8.7ch; font-size: clamp(52px, 6.1vw, 92px); }
+    .hero::after { background: linear-gradient(90deg, rgba(247,246,242,.78) 0%, rgba(247,246,242,.56) 31%, rgba(247,246,242,.10) 57%, rgba(21,23,25,.04) 100%); }
+    @media (max-width: 850px) {
+      .hero-content { width: calc(100% - 34px); }
+      .hero h1 { max-width: 8.2ch; font-size: clamp(44px, 12.8vw, 68px); }
+      .hero::after { background: linear-gradient(180deg, rgba(247,246,242,.50) 0%, rgba(247,246,242,.36) 37%, rgba(247,246,242,.08) 65%, rgba(21,23,25,.05) 100%); }
+    }
+    .menu-button { width: 48px; height: 48px; border: 1px solid rgba(57,123,157,.72); border-radius: 4px; background: linear-gradient(145deg, rgba(185,215,230,.88), rgba(120,170,189,.56)); color: #2f6683; box-shadow: 0 10px 24px -14px rgba(47,102,131,.7), inset 0 1px rgba(255,255,255,.8); transition: transform .18s var(--ease), box-shadow .18s var(--ease), background .18s var(--ease); }
+    .menu-button span { background: currentColor; width: 20px; }
+    .menu-button:hover { transform: translateY(-2px); background: linear-gradient(145deg, rgba(185,215,230,1), rgba(120,170,189,.78)); box-shadow: 0 14px 28px -15px rgba(47,102,131,.8), inset 0 1px rgba(255,255,255,.9); }
+    .menu-button:active { transform: scale(.96); }
   </style>
 </head>
 <body>
@@ -210,8 +224,8 @@
   <main>
     <section class="hero" id="inicio">
       <picture class="hero-picture">
-        <source media="(max-width: 850px)" srcset="https://3000-isb56fe6vwmdcm95ktqus-e837c1a8.us3.manus.computer/manus-storage/dra-mariana-hero-mobile_64412812.png">
-        <img src="https://3000-isb56fe6vwmdcm95ktqus-e837c1a8.us3.manus.computer/manus-storage/dra-mariana-hero-desktop_292a5012.png" alt="Dra. Mariana Gil Furlanetti em ambiente de atendimento dermatológico" fetchpriority="high">
+        <source media="(max-width: 850px)" srcset="assets/mariana-hero-mobile.webp" type="image/webp">
+        <img src="assets/mariana-hero-desktop.webp" alt="Dra. Mariana Gil Furlanetti em ambiente de atendimento dermatológico" width="1920" height="1080" decoding="async" loading="eager" fetchpriority="high">
       </picture>
       <div class="hero-content">
         <span class="eyebrow reveal in">Dermatologia clínica e estética</span>
