@@ -114,15 +114,12 @@
     .contact-details div { min-width: 170px; }
     .contact-details b { display: block; margin-bottom: 7px; color: var(--blue-deep); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; }
     .contact-details span { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; }
-    .gallery { display: grid; grid-template-columns: 1.1fr .9fr; min-height: 510px; }
+    .gallery { display: grid; grid-template-columns: 1fr; min-height: 510px; }
     .gallery-photo { position: relative; overflow: hidden; background: var(--beige); }
-    .gallery-photo:first-child { grid-row: span 2; }
+    .gallery-photo:first-child { grid-row: auto; }
     .gallery-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease); }
     .gallery-photo:hover img { transform: scale(1.04); }
     .gallery-photo figcaption { position: absolute; inset: auto 0 0; padding: 20px; color: var(--white); background: linear-gradient(transparent, rgba(21,23,25,.76)); font-size: 9px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
-    .gallery-photo.logo-tile { display: grid; place-items: center; background: var(--blue); }
-    .gallery-photo.logo-tile img { width: 148px; height: 148px; object-fit: contain; }
-    .gallery-photo.logo-tile figcaption { background: none; color: var(--black); }
 
     .final-cta { padding: 155px 0 126px; background: var(--beige-pale); text-align: center; }
     .final-cta h2 { max-width: 14ch; margin: 17px auto 0; font-size: clamp(46px, 6.2vw, 85px); }
@@ -147,7 +144,7 @@
       .about, .for-you { padding: 92px 0; } .two-col, .care-copy, .areas-header { grid-template-columns: 1fr; gap: 36px; } .section-title h2, .areas h2, .care h2 { font-size: 44px; } .body-copy p { font-size: 14px; line-height: 1.82; } .body-copy p:first-child { font-size: 27px; }
       .areas { padding: 88px 0; } .areas-header { margin-bottom: 40px; } .area { grid-template-columns: 34px 1fr; gap: 18px; padding: 27px 0; } .area p { grid-column: 2; } .area h3 { font-size: 29px; }
       .check-list li { font-size: 14px; grid-template-columns: 28px 1fr; } .quote { padding: 118px 21px; } .quote blockquote { font-size: 37px; }
-      .care { padding-top: 92px; } .gallery { grid-template-columns: 1fr; min-height: 0; } .gallery-photo, .gallery-photo:first-child { min-height: 345px; grid-row: auto; } .gallery-photo.logo-tile { min-height: 215px; }
+      .care { padding-top: 92px; } .gallery { grid-template-columns: 1fr; min-height: 0; } .gallery-photo, .gallery-photo:first-child { min-height: 345px; grid-row: auto; }
       .final-cta { padding: 106px 21px 94px; } .final-cta h2 { font-size: 55px; } footer { padding: 28px 21px; align-items: flex-start; flex-direction: column; line-height: 1.5; }
     }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
@@ -171,8 +168,6 @@
     .final-cta { background: var(--blue); }
     .final-cta h2 { color: var(--black); }
     .final-cta h2 em { color: var(--white); }
-    .gallery-photo.logo-tile { background: var(--blue); }
-    .gallery-photo.logo-tile figcaption { color: var(--black); }
     footer { color: var(--beige); }
   </style>
   <style>
@@ -188,7 +183,6 @@
     .button-outline:hover { color: var(--white); }
     .final-cta h2 { color: var(--beige-ink); }
     .final-cta h2 em { color: var(--white); }
-    .gallery-photo.logo-tile figcaption { color: var(--beige-ink); }
     .brand span, nav a, .menu-button, .footer-brand span { color: var(--beige); }
     .button-primary:hover { color: var(--white); }
     .hero { --cover-blue: #2f6683; }
@@ -296,8 +290,6 @@
       </div>
       <div class="gallery reveal">
         <figure class="gallery-photo"><picture><source media="(max-width: 850px)" srcset="assets/image-03-sm.webp" type="image/webp"><img src="assets/image-03.webp" alt="Sala de atendimento dermatológico da Dra. Mariana" width="828" height="460" loading="lazy" decoding="async"></picture><figcaption>Sala de atendimento</figcaption></figure>
-        <figure class="gallery-photo logo-tile"><img src="assets/mgf-logo-original.png" alt="Monograma MGF" loading="eager" decoding="async"><figcaption>Identidade MGF</figcaption></figure>
-        <figure class="gallery-photo"><picture><source media="(max-width: 850px)" srcset="assets/image-02-sm.webp" type="image/webp"><img src="assets/image-02.webp" alt="Recepção do consultório dermatológico da Dra. Mariana" width="828" height="621" loading="lazy" decoding="async"></picture><figcaption>Recepção do consultório</figcaption></figure>
       </div>
     </section>
 
