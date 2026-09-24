@@ -202,6 +202,11 @@
     .menu-button:hover { transform: translateY(-2px); background: linear-gradient(145deg, rgba(185,215,230,1), rgba(120,170,189,.78)); box-shadow: 0 14px 28px -15px rgba(47,102,131,.8), inset 0 1px rgba(255,255,255,.9); }
     .menu-button:active { transform: scale(.96); }
   </style>
+
+  <style id="logo-visibility-fix">
+    /* Keep the original beige monogram visible in the header and footer. */
+    header .brand img, footer .footer-brand img { filter: none !important; opacity: 1; visibility: visible; }
+  </style>
 </head>
 <body>
   <header id="siteHeader">
