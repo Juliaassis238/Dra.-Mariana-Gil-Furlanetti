@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">\n  <link rel="preload" as="image" href="assets/mariana-hero.webp" type="image/webp">
   <style>
+    /* Editorial direction: no decorative icons or emoji characters. */
     :root {
       color-scheme: light;
       --paper: #f5f2ed;
@@ -48,13 +49,11 @@
     .section-title { max-width: 760px; margin: 0; font-size: clamp(40px, 5vw, 66px); line-height: 1.04; }
     .section-copy { max-width: 55ch; color: #586368; font-size: 15px; line-height: 1.82; }
     .button { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 14px; padding: 0 23px; border: 1px solid var(--blue); color: var(--paper); background: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .06em; transition: color .2s var(--ease), background .2s var(--ease), border .2s var(--ease), transform .2s var(--ease); }
-    .button::after { content: "↗"; font-size: 14px; font-weight: 400; }
     .button:hover { border-color: var(--clay); color: #fff; background: var(--clay); transform: translateY(-2px); }
     .button:active { transform: scale(.98); }
     .button-light { color: var(--blue); background: transparent; }
     .button-light:hover { color: #fff; }
     .text-link { display: inline-flex; align-items: center; gap: 10px; padding: 0 0 7px; border-bottom: 1px solid currentColor; color: var(--blue); font-size: 12px; font-weight: 700; transition: color .2s ease; }
-    .text-link::after { content: "↗"; font-size: 14px; font-weight: 400; }
     .text-link:hover { color: var(--clay); }
 
     /* A navegação permanece leve e legível em qualquer posição de scroll. */
@@ -474,7 +473,7 @@
       </div>
       <div class="appointment-details reveal">
         <span class="detail-label">Fale pelo WhatsApp</span>
-        <p class="phone"><a href="https://wa.me/551131923843" target="_blank" rel="noopener noreferrer">+55 11 3192-3843 ↗</a></p>
+        <p class="phone"><a href="https://wa.me/551131923843" target="_blank" rel="noopener noreferrer">+55 11 3192-3843</a></p>
         <span class="detail-label">Atendimento</span>
         <p>São Paulo · particular<br>Presencial e teleconsulta</p>
         <span class="detail-label">Consultório</span>
@@ -489,7 +488,7 @@
         <p class="footer-registry">CRM-SP 218192<br>RQE 124651<br>São Paulo · SP</p>
         <nav class="footer-links" aria-label="Redes sociais"><a href="https://www.instagram.com/marianagil_dermato/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.tiktok.com/@dermatologiamarianagil" target="_blank" rel="noopener noreferrer">TikTok</a><a href="https://wa.me/551131923843" target="_blank" rel="noopener noreferrer">WhatsApp</a></nav>
       </div>
-      <div class="footer-bottom"><span>© <span id="year"></span> Dra. Mariana Gil Furlanetti</span><a class="back-to-top" href="#inicio">Voltar ao início ↑</a></div>
+      <div class="footer-bottom"><span>© <span id="year"></span> Dra. Mariana Gil Furlanetti</span><a class="back-to-top" href="#inicio">Voltar ao início</a></div>
     </div>
   </footer>
   <script>
