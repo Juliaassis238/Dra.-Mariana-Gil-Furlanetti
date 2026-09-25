@@ -80,6 +80,7 @@
     /* 1. Hero: nome, posicionamento e retrato fornecido no próprio briefing. */
     .hero { position: relative; display: flex; width: 100%; min-height: 100svh; margin: 0; align-items: stretch; overflow: hidden; background: var(--blue); }
     .hero::before { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgba(24,52,61,.12), transparent 62%); content: ""; pointer-events: none; }
+    .hero::after { position: absolute; z-index: 1; right: -18vw; bottom: -36vw; width: 63vw; height: 63vw; border: 1px solid rgba(245,242,237,.26); border-radius: 50%; content: ""; pointer-events: none; animation: line-drift 16s ease-in-out infinite alternate; }
     .hero-copy { position: relative; z-index: 2; display: flex; width: 46%; margin: 0; flex-direction: column; align-items: flex-start; justify-content: center; padding: 126px clamp(30px, 6vw, 96px) 76px max(32px, calc((100vw - var(--measure)) / 2)); background: transparent; }
     .hero h1 { max-width: 9ch; margin-bottom: 15px; color: #fff; font-size: clamp(51px, 5.3vw, 76px); }
     .hero-role { margin: 0 0 21px; color: #e4bea6; font-size: 12px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
@@ -89,7 +90,7 @@
     .hero .button:hover { border-color: var(--clay); background: var(--clay); }
     .hero-note { margin: 34px 0 0; color: rgba(255, 255, 255, .7); font-size: 10px; letter-spacing: .08em; }
     .hero-image { position: absolute; z-index: 0; inset: 0; width: 100%; min-height: 0; max-height: none; overflow: hidden; background: var(--blue-soft); }
-    .hero-image::after { position: absolute; inset: 0; border: 0; content: ""; pointer-events: none; }
+    .hero-image::after { position: absolute; z-index: 1; right: -12%; bottom: -15%; width: 58%; height: 38%; border: 1px solid rgba(245,242,237,.24); border-radius: 50%; content: ""; pointer-events: none; animation: line-drift-reverse 20s ease-in-out infinite alternate; }
     .hero-image picture { display: block; width: 100%; height: 100%; }
     .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; background: var(--blue-soft); animation: hero-photo-in 1.25s var(--ease) both; }
     .hero-caption { display: none; }
@@ -220,6 +221,8 @@
     .back-to-top { color: #f1e6d9; }
 
     @keyframes hero-photo-in { from { opacity: 0; transform: scale(1.06); } to { opacity: 1; transform: scale(1); } }
+    @keyframes line-drift { from { transform: translate3d(-1.5%, 0, 0) rotate(-7deg); } to { transform: translate3d(1.5%, -2%, 0) rotate(-3deg); } }
+    @keyframes line-drift-reverse { from { transform: translate3d(1%, 1%, 0) rotate(7deg); } to { transform: translate3d(-2%, -1%, 0) rotate(2deg); } }
     @keyframes hero-copy-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
     .hero-copy > * { animation: hero-copy-in .7s var(--ease) both; }
     .hero-copy > :nth-child(2) { animation-delay: .08s; }
