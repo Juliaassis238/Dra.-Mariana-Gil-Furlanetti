@@ -12,3 +12,7 @@ O projeto usa dois retratos editoriais gerados a partir de um retrato profission
 - [Guia Médico do CREMESP](https://guiamedico.cremesp.org.br/)
 
 O conteúdo não promete resultados de tratamentos e deve ser revisado pela profissional responsável.
+
+## Fotografia editorial das áreas e tratamentos
+
+As imagens editoriais de pele, textura, fios e couro cabeludo são ilustrações geradas para o site, sem rostos ou instrumentos clínicos. Elas não representam pacientes, procedimentos realizados nem resultados de tratamento. As fotografias profissionais da médica permanecem restritas às seções institucionais.
