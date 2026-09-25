@@ -149,10 +149,10 @@
     /* 5. Estética: posicionamento, imagem de rosto e quatro princípios. */
     .aesthetics { padding: 108px 0 112px; }
     .aesthetics-grid { display: grid; grid-template-columns: 1.04fr .96fr; gap: clamp(50px, 9vw, 130px); align-items: center; }
-    .aesthetics-image { position: relative; min-height: 520px; overflow: hidden; border-radius: 46% 0 46% 0; background: var(--sand); transition: border-radius .6s var(--ease); }
+    .aesthetics-image { position: relative; aspect-ratio: 4 / 5; min-height: 0; overflow: hidden; border-radius: 46% 0 46% 0; background: var(--sand); transition: border-radius .6s var(--ease); }
     .aesthetics-image:hover { border-radius: 20% 0 20% 0; }
     .aesthetics-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 36%; }
-    .aesthetics-caption { position: absolute; right: 19px; bottom: 19px; padding: 9px 12px; color: var(--blue); background: var(--paper); font-size: 9px; letter-spacing: .11em; text-transform: uppercase; }
+    .aesthetics-caption { position: absolute; z-index: 2; right: 19px; bottom: 19px; max-width: calc(100% - 38px); padding: 9px 12px; color: var(--blue); background: var(--paper); font-size: 9px; line-height: 1.45; letter-spacing: .11em; text-align: right; text-transform: uppercase; }
     .aesthetics-copy .section-title { max-width: 9ch; margin: 21px 0 25px; }
     .aesthetics-copy > p { max-width: 50ch; margin-bottom: 17px; color: #586368; font-size: 14px; line-height: 1.85; }
     .values { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 25px; margin: 30px 0 33px; border-top: 1px solid var(--line); }
@@ -307,7 +307,7 @@
       .black-copy p { font-size: 13px; }
       .aesthetics { padding: 83px 0 90px; }
       .aesthetics-grid { grid-template-columns: 1fr; gap: 36px; }
-      .aesthetics-image { min-height: 0; height: min(112vw, 520px); }
+      .aesthetics-image { height: auto; aspect-ratio: 4 / 5; }
       .aesthetics-copy .section-title { max-width: 10ch; margin: 14px 0 19px; }
       .aesthetics-copy > p { font-size: 13px; }
       .values { margin: 25px 0 29px; }
