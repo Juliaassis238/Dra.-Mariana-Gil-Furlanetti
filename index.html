@@ -145,6 +145,8 @@
     .focus-list span::before { margin-right: 10px; color: var(--clay); content: "—"; }
     .focus-link { display: inline-flex; margin-top: 26px; padding-bottom: 8px; border-bottom: 1px solid rgba(36, 72, 85, .45); color: var(--blue); font-size: 9px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
     .focus-link:hover { border-color: var(--clay); color: var(--clay); }
+    .focus-photo { min-height: 420px; overflow: hidden; background: var(--sand); }
+    .focus-photo img { width: 100%; height: 100%; min-height: 420px; object-fit: cover; }
 
     /* 4. Pele Negra: uma seção de destaque, com fotografia em escala ampla. */
     .black-skin { display: grid; min-height: 590px; grid-template-columns: 1.04fr .96fr; color: var(--paper); background: var(--blue); }
@@ -319,7 +321,7 @@
       .focus-section > div > p { font-size: 13px; }
       .focus-list { gap: 0 15px; }
       .focus-list span { font-size: 10px; line-height: 1.45; }
-      .focus-section-note { padding-top: 4px; }
+      .focus-photo, .focus-photo img { min-height: 310px; }
       .black-skin { grid-template-columns: 1fr; }
       .black-image { min-height: 0; height: min(119vw, 550px); }
       .black-image img { object-position: center 32%; }
@@ -468,7 +470,7 @@
     <!-- 4 · Dermatologia clínica -->
     <section class="focus-section clinical-focus" id="dermatologia-clinica" aria-labelledby="clinical-title">
       <div><span class="focus-index">01 / Cuidado da pele</span><h2 id="clinical-title">Dermatologia clínica</h2><p>Uma avaliação cuidadosa para investigar as causas e tratar as principais condições da pele com segurança, ciência e um plano individualizado.</p><div class="focus-list" aria-label="Atendimentos de dermatologia clínica"><span>Acne e rosácea</span><span>Manchas e melasma</span><span>Dermatites e psoríase</span><span>Textura e qualidade da pele</span></div><a class="focus-link" href="#tratamentos">Ver tratamentos</a></div>
-      <div class="focus-section-note"><span class="eyebrow">Cuidado individualizado</span><h3 style="max-width:13ch;margin:20px 0 0;color:var(--blue);font-family:var(--serif);font-size:clamp(28px,3.5vw,48px);font-weight:400;line-height:1.15">Cada pele tem uma história — e o tratamento começa pela escuta.</h3></div>
+      <figure class="focus-photo"><img src="assets/ai-texture-peel.webp" alt="Pele em detalhe para dermatologia clínica" loading="lazy" decoding="async" width="1200" height="1500"></figure>
     </section>
 
     <!-- 4 · Pele negra -->
@@ -489,7 +491,7 @@
     <!-- 6 · Cabelos e couro cabeludo -->
     <section class="focus-section hair-focus" id="cabelos-couro-cabeludo" aria-labelledby="hair-title">
       <div><span class="focus-index">03 / Cabelos</span><h2 id="hair-title">Cabelos e couro cabeludo</h2><p>A investigação da queda de cabelo e das doenças do couro cabeludo considera sintomas, histórico, rotina e características dos fios.</p><div class="focus-list" aria-label="Atendimentos para cabelos e couro cabeludo"><span>Queda de cabelo</span><span>Alopecias</span><span>Doenças do couro cabeludo</span><span>Saúde e qualidade dos fios</span></div><a class="focus-link" href="#tratamento-capilar">Ver tratamentos capilares</a></div>
-      <div class="focus-section-note"><span class="eyebrow">Olhar para a raiz</span><h3 style="max-width:13ch;margin:20px 0 0;color:var(--blue);font-family:var(--serif);font-size:clamp(28px,3.5vw,48px);font-weight:400;line-height:1.15">Cuidar dos cabelos também é cuidar da saúde da pele.</h3></div>
+      <figure class="focus-photo"><img src="assets/ai-hair-editorial.webp" alt="Cabelos em detalhe para tratamentos capilares" loading="lazy" decoding="async" width="1100" height="1375"></figure>
     </section>
 
     <!-- 7 · Estética com naturalidade -->
