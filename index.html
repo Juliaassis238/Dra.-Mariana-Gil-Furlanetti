@@ -134,14 +134,17 @@
     .area-item h3 { margin: 8px 0 8px; font-size: clamp(23px, 2.3vw, 31px); line-height: 1.1; }
     .area-item p { max-width: 30ch; margin: 0; color: #596669; font-size: 12px; line-height: 1.75; }
     .area-feature-label { display: inline-block; margin-top: 11px; color: var(--blue); font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-    .area-details { margin-top: 86px; border-top: 1px solid var(--line); }
-    .area-detail { display: grid; grid-template-columns: 82px minmax(0, .82fr) minmax(0, 1fr); gap: 28px; align-items: start; padding: 34px 0 37px; border-bottom: 1px solid var(--line); }
-    .area-detail-index { color: var(--clay); font-size: 10px; font-weight: 700; letter-spacing: .17em; }
-    .area-detail h3 { margin: 0; color: var(--blue); font-size: clamp(26px, 3vw, 42px); line-height: 1.05; }
-    .area-detail-copy { max-width: 47ch; color: #596669; font-size: 14px; line-height: 1.82; }
-    .area-detail-copy p { margin: 0 0 13px; }
-    .area-detail-link { display: inline-flex; margin-top: 5px; padding-bottom: 7px; border-bottom: 1px solid rgba(36, 72, 85, .45); color: var(--blue); font-size: 9px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
-    .area-detail-link:hover { border-color: var(--clay); color: var(--clay); }
+    .focus-section { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(48px, 8vw, 120px); align-items: center; padding: 92px max(32px, calc((100vw - var(--measure)) / 2)); }
+    .focus-section.clinical-focus { background: var(--paper); }
+    .focus-section.hair-focus { background: #e8eeeb; }
+    .focus-index { display: block; margin-bottom: 18px; color: var(--clay); font-size: 10px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
+    .focus-section h2 { max-width: 10ch; margin: 0 0 23px; color: var(--blue); font-size: clamp(42px, 5vw, 68px); line-height: 1.02; }
+    .focus-section > div > p { max-width: 48ch; color: #586368; font-size: 15px; line-height: 1.82; }
+    .focus-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 26px; margin-top: 28px; border-top: 1px solid var(--line); }
+    .focus-list span { padding: 17px 0; border-bottom: 1px solid var(--line); color: var(--blue); font-size: 12px; font-weight: 600; }
+    .focus-list span::before { margin-right: 10px; color: var(--clay); content: "—"; }
+    .focus-link { display: inline-flex; margin-top: 26px; padding-bottom: 8px; border-bottom: 1px solid rgba(36, 72, 85, .45); color: var(--blue); font-size: 9px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .focus-link:hover { border-color: var(--clay); color: var(--clay); }
 
     /* 4. Pele Negra: uma seção de destaque, com fotografia em escala ampla. */
     .black-skin { display: grid; min-height: 590px; grid-template-columns: 1.04fr .96fr; color: var(--paper); background: var(--blue); }
@@ -310,12 +313,12 @@
       .area-item h3 { font-size: clamp(20px, 5.8vw, 27px); }
       .area-item p { font-size: 11px; }
       .area-feature-label { font-size: 8px; }
-      .area-details { margin-top: 59px; }
-      .area-detail { grid-template-columns: 42px 1fr; gap: 9px 16px; padding: 25px 0 29px; }
-      .area-detail-index { font-size: 8px; line-height: 1.4; }
-      .area-detail h3 { font-size: clamp(24px, 7vw, 34px); }
-      .area-detail-copy { grid-column: 2; font-size: 12px; line-height: 1.75; }
-      .area-detail-link { font-size: 8px; }
+      .focus-section { grid-template-columns: 1fr; gap: 31px; padding: 72px 21px 78px; }
+      .focus-section h2 { max-width: 11ch; font-size: clamp(42px, 12vw, 61px); }
+      .focus-section > div > p { font-size: 13px; }
+      .focus-list { gap: 0 15px; }
+      .focus-list span { font-size: 10px; line-height: 1.45; }
+      .focus-section-note { padding-top: 4px; }
       .black-skin { grid-template-columns: 1fr; }
       .black-image { min-height: 0; height: min(119vw, 550px); }
       .black-image img { object-position: center 32%; }
@@ -428,7 +431,7 @@
         </div>
         <div class="area-grid">
           <article class="area-item reveal">
-            <a class="area-link" href="#tratamentos" aria-label="Conheça a Dermatologia clínica">
+            <a class="area-link" href="#dermatologia-clinica" aria-label="Conheça a Dermatologia clínica">
               <div class="area-image"><img src="assets/ai-texture-peel.webp" alt="Textura natural da pele em fotografia editorial" loading="lazy" decoding="async" width="1100" height="1375"></div>
               <span class="area-number">01 / CUIDADO DA PELE</span><h3>Dermatologia clínica</h3>
               <p>Acne, manchas, melasma, dermatites, psoríase, rosácea e outras condições da pele.</p>
@@ -442,7 +445,7 @@
             </a>
           </article>
           <article class="area-item reveal">
-            <a class="area-link" href="#tratamento-capilar" aria-label="Conheça os tratamentos para cabelos e couro cabeludo">
+            <a class="area-link" href="#cabelos-couro-cabeludo" aria-label="Conheça os tratamentos para cabelos e couro cabeludo">
               <div class="area-image"><img src="assets/ai-hair-editorial.webp" alt="Cabelos e couro cabeludo em fotografia editorial" loading="lazy" decoding="async" width="1100" height="1375"></div>
               <span class="area-number">03 / CABELOS</span><h3>Cabelos e couro cabeludo</h3>
               <p>Investigação e tratamento das principais causas de queda de cabelo e doenças do couro cabeludo.</p>
@@ -456,29 +459,14 @@
             </a>
           </article>
         </div>
-        <div class="area-details" aria-label="Detalhes das áreas de atuação">
-          <article class="area-detail" id="detalhe-clinica">
-            <span class="area-detail-index">01 / CLÍNICA</span>
-            <h3>Dermatologia clínica</h3>
-            <div class="area-detail-copy"><p>Investigação e tratamento de acne, manchas, melasma, dermatites, psoríase, rosácea e outras condições da pele.</p><p>O cuidado começa por uma avaliação individualizada para entender a história da pele e construir um plano seguro e possível para cada pessoa.</p><a class="area-detail-link" href="#tratamentos">Ver tratamentos</a></div>
-          </article>
-          <article class="area-detail" id="detalhe-pele-negra">
-            <span class="area-detail-index">02 / PELE NEGRA</span>
-            <h3>Pele negra</h3>
-            <div class="area-detail-copy"><p>A pele negra possui particularidades que precisam ser consideradas na prevenção, no diagnóstico e no tratamento.</p><p>O atendimento olha com atenção para manchas, acne, inflamações, cicatrizes, alterações de pigmentação e alopecias, respeitando cada tom e cada história.</p><a class="area-detail-link" href="#pele-negra">Conhecer esta atuação</a></div>
-          </article>
-          <article class="area-detail" id="detalhe-cabelos">
-            <span class="area-detail-index">03 / CABELOS</span>
-            <h3>Cabelos e couro cabeludo</h3>
-            <div class="area-detail-copy"><p>A queda de cabelo e as doenças do couro cabeludo podem ter diferentes causas e precisam de investigação cuidadosa.</p><p>A avaliação considera sinais, rotina, histórico e características dos fios para orientar um tratamento direcionado e individualizado.</p><a class="area-detail-link" href="#tratamento-capilar">Ver tratamentos capilares</a></div>
-          </article>
-          <article class="area-detail" id="detalhe-estetica">
-            <span class="area-detail-index">04 / ESTÉTICA</span>
-            <h3>Dermatologia estética</h3>
-            <div class="area-detail-copy"><p>Procedimentos planejados para valorizar características individuais sem apagar aquilo que torna cada rosto único.</p><p>Cada indicação considera anatomia, proporções, segurança e o momento de vida de cada paciente, buscando resultados naturais.</p><a class="area-detail-link" href="#estetica">Conhecer a estética</a></div>
-          </article>
         </div>
       </div>
+    </section>
+
+    <!-- 4 · Dermatologia clínica -->
+    <section class="focus-section clinical-focus" id="dermatologia-clinica" aria-labelledby="clinical-title">
+      <div><span class="focus-index">01 / Cuidado da pele</span><h2 id="clinical-title">Dermatologia clínica</h2><p>Uma avaliação cuidadosa para investigar as causas e tratar as principais condições da pele com segurança, ciência e um plano individualizado.</p><div class="focus-list" aria-label="Atendimentos de dermatologia clínica"><span>Acne e rosácea</span><span>Manchas e melasma</span><span>Dermatites e psoríase</span><span>Textura e qualidade da pele</span></div><a class="focus-link" href="#tratamentos">Ver tratamentos</a></div>
+      <div class="focus-section-note"><span class="eyebrow">Cuidado individualizado</span><h3 style="max-width:13ch;margin:20px 0 0;color:var(--blue);font-family:var(--serif);font-size:clamp(28px,3.5vw,48px);font-weight:400;line-height:1.15">Cada pele tem uma história — e o tratamento começa pela escuta.</h3></div>
     </section>
 
     <!-- 4 · Pele negra -->
@@ -496,7 +484,13 @@
       </div>
     </section>
 
-    <!-- 5 · Estética com naturalidade -->
+    <!-- 6 · Cabelos e couro cabeludo -->
+    <section class="focus-section hair-focus" id="cabelos-couro-cabeludo" aria-labelledby="hair-title">
+      <div><span class="focus-index">03 / Cabelos</span><h2 id="hair-title">Cabelos e couro cabeludo</h2><p>A investigação da queda de cabelo e das doenças do couro cabeludo considera sintomas, histórico, rotina e características dos fios.</p><div class="focus-list" aria-label="Atendimentos para cabelos e couro cabeludo"><span>Queda de cabelo</span><span>Alopecias</span><span>Doenças do couro cabeludo</span><span>Saúde e qualidade dos fios</span></div><a class="focus-link" href="#tratamento-capilar">Ver tratamentos capilares</a></div>
+      <div class="focus-section-note"><span class="eyebrow">Olhar para a raiz</span><h3 style="max-width:13ch;margin:20px 0 0;color:var(--blue);font-family:var(--serif);font-size:clamp(28px,3.5vw,48px);font-weight:400;line-height:1.15">Cuidar dos cabelos também é cuidar da saúde da pele.</h3></div>
+    </section>
+
+    <!-- 7 · Estética com naturalidade -->
     <section class="aesthetics" id="estetica" aria-labelledby="aesthetics-title">
       <div class="wrap aesthetics-grid">
         <figure class="aesthetics-image reveal"><img src="assets/ai-natural-aesthetics.webp" alt="Beleza natural em fotografia editorial" loading="lazy" decoding="async" width="1100" height="1375"><figcaption class="aesthetics-caption">Beleza sem apagar a individualidade</figcaption></figure>
@@ -511,7 +505,7 @@
       </div>
     </section>
 
-    <!-- 6 · Tratamentos -->
+    <!-- 8 · Tratamentos -->
     <section class="treatments" id="tratamentos" aria-labelledby="treatments-title">
       <div class="wrap">
         <div class="treatments-intro reveal">
@@ -534,7 +528,7 @@
       </div>
     </section>
 
-    <!-- 7 · Conteúdo -->
+    <!-- 9 · Conteúdo -->
     <section class="journal" id="conteudos" aria-labelledby="journal-title">
       <div class="wrap">
         <div class="journal-top reveal">
@@ -559,7 +553,7 @@
       </div>
     </section>
 
-    <!-- 8 · Agendamento -->
+    <!-- 10 · Agendamento -->
     <section class="appointment" id="agendamento" aria-labelledby="appointment-title">
       <div class="appointment-main reveal">
         <span class="eyebrow">Agendamento</span>
