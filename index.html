@@ -122,7 +122,9 @@
     .areas-top .section-copy { max-width: 37ch; margin-bottom: 5px; }
     .area-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 21px; }
     .area-item { min-width: 0; }
-    .area-image { aspect-ratio: .78; overflow: hidden; border-radius: 0; background: #d6d1c9; transition: border-radius .55s var(--ease), transform .55s var(--ease); }
+    .area-image { position: relative; aspect-ratio: .78; overflow: hidden; border-radius: 0; background: #d6d1c9; transition: border-radius .55s var(--ease), transform .55s var(--ease); }
+    .area-image::after { position: absolute; inset: 11px; border: 1px solid rgba(245,242,237,.32); border-radius: inherit; content: ""; pointer-events: none; opacity: 0; transition: opacity .4s ease; }
+    .area-item:hover .area-image::after { opacity: 1; }
     .area-item:nth-child(2) .area-image { border-radius: 42% 0 0 0; }
     .area-item:nth-child(3) .area-image { border-radius: 0 0 42% 42%; }
     .area-item:nth-child(4) .area-image { border-radius: 0 42% 0 0; }
@@ -151,8 +153,9 @@
     .aesthetics-grid { display: grid; grid-template-columns: 1.04fr .96fr; gap: clamp(50px, 9vw, 130px); align-items: center; }
     .aesthetics-image { position: relative; aspect-ratio: 4 / 5; min-height: 0; overflow: hidden; border-radius: 46% 0 46% 0; background: var(--sand); transition: border-radius .6s var(--ease); }
     .aesthetics-image:hover { border-radius: 20% 0 20% 0; }
+    .aesthetics-image::before { position: absolute; z-index: 1; top: 11%; right: -10%; width: 57%; height: 37%; border: 1px solid rgba(245,242,237,.42); border-radius: 50%; content: ""; pointer-events: none; animation: line-drift-reverse 18s ease-in-out infinite alternate; }
     .aesthetics-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 36%; }
-    .aesthetics-caption { position: absolute; z-index: 2; right: 19px; bottom: 19px; max-width: calc(100% - 38px); padding: 9px 12px; color: var(--blue); background: var(--paper); font-size: 9px; line-height: 1.45; letter-spacing: .11em; text-align: right; text-transform: uppercase; }
+    .aesthetics-caption { position: absolute; z-index: 2; right: 19px; bottom: 19px; left: 19px; max-width: none; padding: 9px 12px; color: var(--blue); background: var(--paper); font-size: 9px; line-height: 1.45; letter-spacing: .08em; overflow-wrap: anywhere; text-align: left; text-transform: uppercase; }
     .aesthetics-copy .section-title { max-width: 9ch; margin: 21px 0 25px; }
     .aesthetics-copy > p { max-width: 50ch; margin-bottom: 17px; color: #586368; font-size: 14px; line-height: 1.85; }
     .values { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 25px; margin: 30px 0 33px; border-top: 1px solid var(--line); }
