@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/mariana-hero.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/hero-desktop-editorial.webp" type="image/webp">
   <style>
     /* Editorial direction: no decorative icons or emoji characters. */
     :root {
@@ -59,7 +59,7 @@
     .text-link:hover { border-color: var(--clay); color: var(--clay); }
 
     /* A navegação permanece leve e legível em qualquer posição de scroll. */
-    .site-header { position: fixed; z-index: 30; top: 0; right: 0; left: 0; display: flex; min-height: 78px; align-items: center; justify-content: space-between; padding: 12px max(32px, calc((100vw - var(--measure)) / 2)); border-bottom: 1px solid transparent; color: #fff; background: transparent; transition: min-height .22s var(--ease), color .22s var(--ease), background .22s var(--ease), box-shadow .22s var(--ease), border-color .22s var(--ease); }
+    .site-header { position: fixed; z-index: 30; top: 0; right: 0; left: 0; display: flex; min-height: 78px; align-items: center; justify-content: space-between; padding: 12px max(32px, calc((100vw - var(--measure)) / 2)); border-bottom: 1px solid rgba(255,255,255,.12); color: #fff; background: rgba(24, 52, 61, .12); transition: min-height .22s var(--ease), color .22s var(--ease), background .22s var(--ease), box-shadow .22s var(--ease), border-color .22s var(--ease); }
     .site-header.scrolled { min-height: 68px; border-color: var(--line); color: var(--blue); background: rgba(245, 242, 237, .96); box-shadow: 0 8px 28px rgba(30, 45, 50, .04); }
     .brand { display: flex; align-items: center; gap: 12px; color: inherit; }
     .brand-logo { display: block; width: 48px; height: 40px; object-fit: contain; object-position: left center; filter: brightness(0) invert(1); }
@@ -75,17 +75,20 @@
     .menu-toggle span { display: block; height: 1px; margin: 5px 0; background: currentColor; transition: transform .18s var(--ease); }
 
     /* 1. Hero: nome, posicionamento e retrato fornecido no próprio briefing. */
-    .hero { position: relative; display: flex; width: 100%; min-height: 100svh; margin: 0; align-items: center; overflow: hidden; background: var(--blue); }
-    .hero::before { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgba(22, 50, 59, .82) 0%, rgba(22, 50, 59, .58) 36%, rgba(22, 50, 59, .12) 72%, rgba(22, 50, 59, .18) 100%); content: ""; pointer-events: none; }
-    .hero-copy { position: relative; z-index: 2; display: flex; width: min(100% - 80px, 1180px); margin: 0 auto; flex-direction: column; align-items: flex-start; justify-content: center; padding: 126px 0 76px; }
+    .hero { position: relative; display: flex; width: 100%; min-height: 100svh; margin: 0; align-items: stretch; overflow: hidden; background: var(--blue); }
+    .hero::before { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgba(24,52,61,.12), transparent 62%); content: ""; pointer-events: none; }
+    .hero-copy { position: relative; z-index: 2; display: flex; width: 46%; margin: 0; flex-direction: column; align-items: flex-start; justify-content: center; padding: 126px clamp(30px, 6vw, 96px) 76px max(32px, calc((100vw - var(--measure)) / 2)); background: transparent; }
     .hero h1 { max-width: 9ch; margin-bottom: 15px; color: #fff; font-size: clamp(51px, 5.3vw, 76px); }
     .hero-role { margin: 0 0 21px; color: #e4bea6; font-size: 12px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
     .hero .lede { max-width: 390px; color: rgba(255, 255, 255, .86); }
     .hero .button { margin-top: 18px; }
+    .hero .button { border-color: rgba(255,255,255,.72); color: #fff; background: transparent; box-shadow: none; }
+    .hero .button:hover { border-color: var(--clay); background: var(--clay); }
     .hero-note { margin: 34px 0 0; color: rgba(255, 255, 255, .7); font-size: 10px; letter-spacing: .08em; }
-    .hero-image { position: absolute; z-index: 0; inset: 0; min-height: 0; max-height: none; overflow: hidden; background: var(--blue-soft); }
+    .hero-image { position: absolute; z-index: 0; inset: 0; width: 100%; min-height: 0; max-height: none; overflow: hidden; background: var(--blue-soft); }
     .hero-image::after { position: absolute; inset: 0; border: 0; content: ""; pointer-events: none; }
-    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 38%; background: var(--blue-soft); }
+    .hero-image picture { display: block; width: 100%; height: 100%; }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; background: var(--blue-soft); }
     .hero-caption { display: none; }
     .principles { display: none; }
     .principles-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
@@ -156,6 +159,9 @@
     .treatment-index { color: var(--clay); font-family: var(--serif); font-size: 18px; font-style: italic; }
     .treatment-row h3 { margin: 0; font-size: clamp(22px, 2.1vw, 29px); }
     .treatment-row p { max-width: 47ch; margin: 0; color: #62686a; font-size: 13px; line-height: 1.7; }
+    .treatment-visuals { display: grid; grid-template-columns: 1.15fr .85fr .85fr; gap: 16px; margin-top: 39px; }
+    .treatment-visuals figure { min-height: 210px; overflow: hidden; background: var(--sand); }
+    .treatment-visuals img { width: 100%; height: 100%; min-height: 210px; object-fit: cover; }
     .treatment-footer { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-top: 32px; }
     .treatment-footer p { max-width: 48ch; margin: 0; color: #727675; font-size: 11px; line-height: 1.7; }
 
@@ -232,14 +238,14 @@
       .nav a:not(.button) { padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 11px; }
       .nav a:not(.button)::after { display: none; }
       .nav .button { align-self: flex-start; margin-top: 17px; }
-      .hero { width: 100%; min-height: 100svh; margin: 0; }
-      .hero-copy { width: min(100% - 42px, 560px); margin-inline: auto; padding: 142px 0 60px; }
+      .hero { width: 100%; min-height: 100svh; margin: 0; flex-direction: column; }
+      .hero-copy { width: 100%; min-height: 100svh; box-sizing: border-box; margin-inline: 0; justify-content: flex-end; padding: 118px 22px 58px; background: linear-gradient(0deg, rgba(24,52,61,.74), transparent 58%); }
       .hero h1 { max-width: 9ch; margin-top: 14px; font-size: clamp(54px, 15vw, 78px); }
       .hero .lede { max-width: 36ch; font-size: 14px; }
       .hero .button { margin-top: 14px; }
       .hero-note { margin-top: 22px; }
-      .hero-image { min-height: 0; height: auto; max-height: none; }
-      .hero-image img { object-position: center 30%; }
+      .hero-image { position: absolute; inset: 0; width: 100%; height: auto; min-height: 0; max-height: none; order: 0; }
+      .hero-image img { object-position: center 20%; }
       .principles { padding: 26px 0; }
       .principles-inner { align-items: flex-start; flex-direction: column; gap: 14px; }
       .principles-list { justify-content: flex-start; gap: 10px 16px; }
@@ -284,6 +290,9 @@
       .treatment-index { grid-row: span 2; font-size: 15px; }
       .treatment-row h3 { font-size: 22px; }
       .treatment-row p { grid-column: 2; font-size: 12px; }
+      .treatment-visuals { grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 25px; }
+      .treatment-visuals figure:first-child { grid-column: 1 / -1; }
+      .treatment-visuals figure, .treatment-visuals img { min-height: 180px; }
       .treatment-footer { align-items: flex-start; flex-direction: column; gap: 20px; margin-top: 26px; }
       .journal { padding: 88px 0 91px; }
       .journal-grid { grid-template-columns: 1fr; gap: 35px; }
@@ -339,7 +348,10 @@
         <p class="hero-note">São Paulo · Atendimento particular presencial e teleconsulta</p>
       </div>
       <figure class="hero-image">
-        <img src="assets/mariana-hero.webp" alt="Dra. Mariana Gil Furlanetti em retrato profissional" width="960" height="1280" fetchpriority="high" decoding="async">
+        <picture>
+          <source media="(max-width: 740px)" srcset="assets/hero-mobile-editorial.webp">
+          <img src="assets/hero-desktop-editorial.webp" alt="Dra. Mariana Gil Furlanetti em retrato profissional" width="1664" height="936" fetchpriority="high" decoding="async">
+        </picture>
         <figcaption class="hero-caption">Ciência · escuta · cuidado</figcaption>
       </figure>
     </section>
@@ -429,7 +441,7 @@
     <section class="treatments" id="tratamentos" aria-labelledby="treatments-title">
       <div class="wrap">
         <div class="treatments-intro reveal">
-          <div><span class="eyebrow">Tratamentos</span><h2 class="section-title" id="treatments-title">Cuidado pensado para você.</h2></div>
+          <div><span class="eyebrow">Tratamentos</span><h2 class="section-title" id="treatments-title">Tratamentos</h2></div>
           <p class="section-copy">Cada tratamento é indicado após avaliação dermatológica e faz parte de um planejamento individualizado.</p>
         </div>
         <div class="treatment-list">
@@ -439,6 +451,11 @@
           <article class="treatment-row reveal"><span class="treatment-index">04</span><h3>Peelings e procedimentos para qualidade da pele</h3><p>Tratamentos direcionados a manchas, textura e renovação cutânea.</p></article>
           <article class="treatment-row reveal"><span class="treatment-index">05</span><h3>Tratamentos capilares</h3><p>Investigação e tratamento das principais causas de queda de cabelo e doenças do couro cabeludo.</p></article>
         </div>
+        <div class="treatment-visuals" aria-label="Imagens editoriais dos tratamentos">
+          <figure><img src="assets/ai-texture-peel.jpg" alt="Textura natural da pele em fotografia editorial" loading="lazy" decoding="async" width="1200" height="1500"></figure>
+          <figure><img src="assets/ai-natural-aesthetics.jpg" alt="Beleza natural em fotografia editorial" loading="lazy" decoding="async" width="1200" height="1500"></figure>
+          <figure><img src="assets/ai-hair-editorial.jpg" alt="Cabelos e couro cabeludo em fotografia editorial" loading="lazy" decoding="async" width="1200" height="1500"></figure>
+        </div>
         <div class="treatment-footer reveal"><p>A indicação e a escolha de cada cuidado dependem de avaliação e conversa individualizadas.</p><a class="text-link" href="https://wa.me/551131923843?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20tratamentos." target="_blank" rel="noopener noreferrer">Converse sobre tratamentos</a></div>
       </div>
     </section>
@@ -447,7 +464,7 @@
     <section class="journal" id="conteudos" aria-labelledby="journal-title">
       <div class="wrap">
         <div class="journal-top reveal">
-          <div><span class="eyebrow">Informação para a vida real</span><h2 class="section-title" id="journal-title">Conhecimento para cuidar melhor da sua pele.</h2></div>
+          <div><span class="eyebrow">Conteúdo</span><h2 class="section-title" id="journal-title">Informação para cuidar melhor da sua pele.</h2></div>
           <p class="section-copy">Conteúdos sobre dermatologia, pele negra, cabelos, saúde da pele e estética, traduzindo conhecimento médico para o dia a dia.</p>
         </div>
         <div class="journal-grid">
