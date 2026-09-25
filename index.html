@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/hero-desktop-editorial.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/hero-mariana-desktop.webp" type="image/webp">
   <style>
     /* Editorial direction: no decorative icons or emoji characters. */
     :root {
@@ -103,10 +103,12 @@
     .about { padding: 83px 0 104px; }
     .about-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: clamp(42px, 7vw, 96px); align-items: start; }
     .about-heading { position: static; }
-    .about-photo { aspect-ratio: .82; margin: 0 0 27px; overflow: hidden; border-radius: 0 0 42% 0; background: var(--sand); transition: border-radius .55s var(--ease); }
+    .about-photo { position: relative; aspect-ratio: .82; margin: 0 0 27px; overflow: hidden; border-radius: 0 0 42% 0; background: var(--sand); transition: border-radius .55s var(--ease); }
     .about-photo:hover { border-radius: 0 0 18% 0; }
-    .about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; transition: transform .8s var(--ease); }
-    .about-photo:hover img { transform: scale(1.035); }
+    .about-photo-main { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; transition: transform .8s var(--ease); }
+    .about-photo-secondary { position: absolute; z-index: 2; right: 4%; bottom: 6%; width: 42%; height: auto; aspect-ratio: 3 / 4; border: 6px solid var(--paper); object-fit: cover; object-position: center 25%; box-shadow: 0 12px 28px rgba(30, 45, 50, .18); transition: transform .55s var(--ease); }
+    .about-photo:hover .about-photo-main { transform: scale(1.035); }
+    .about-photo:hover .about-photo-secondary { transform: translateY(-4px); }
     .about-heading .section-title { max-width: 9ch; margin-top: 16px; font-size: clamp(38px, 4.2vw, 57px); }
     .about-copy { max-width: 650px; }
     .about-copy p { margin: 0 0 19px; color: #536167; font-size: 15px; line-height: 1.9; }
@@ -373,8 +375,8 @@
       </div>
       <figure class="hero-image">
         <picture>
-          <source media="(max-width: 740px)" srcset="assets/hero-mobile-editorial.webp">
-          <img src="assets/hero-desktop-editorial.webp" alt="Dra. Mariana Gil Furlanetti em retrato profissional" width="1664" height="936" fetchpriority="high" decoding="async">
+          <source media="(max-width: 740px)" srcset="assets/hero-mariana-mobile.webp">
+          <img src="assets/hero-mariana-desktop.webp" alt="Dra. Mariana Gil Furlanetti em retrato profissional" width="2560" height="1440" fetchpriority="high" decoding="async">
         </picture>
         <figcaption class="hero-caption">Ciência · escuta · cuidado</figcaption>
       </figure>
@@ -386,7 +388,7 @@
     <!-- 2 · Sobre Mariana -->
     <section class="about" id="sobre" aria-labelledby="about-title">
       <div class="wrap about-grid">
-        <div class="about-heading reveal"><figure class="about-photo"><img src="assets/mariana-seated-detail.webp" alt="Dra. Mariana Gil Furlanetti em retrato profissional" loading="lazy" decoding="async" width="1024" height="1280"></figure><span class="eyebrow">Sobre Mariana</span><h2 class="section-title" id="about-title">Dermatologia para além do diagnóstico.</h2></div>
+        <div class="about-heading reveal"><figure class="about-photo"><img class="about-photo-main" src="assets/mariana-about-new.webp" alt="Dra. Mariana Gil Furlanetti em retrato profissional" loading="lazy" decoding="async" width="1086" height="1448"><img class="about-photo-secondary" src="assets/mariana-portrait-office.webp" alt="Dra. Mariana Gil Furlanetti em seu consultório, ao lado de livros de dermatologia" loading="lazy" decoding="async" width="1086" height="1448"></figure><span class="eyebrow">Sobre Mariana</span><h2 class="section-title" id="about-title">Dermatologia para além do diagnóstico.</h2></div>
         <div class="about-copy reveal">
           <p class="opening">Cuidar da pele começa por escutar a história de cada pessoa.</p>
           <p>Minha trajetória na saúde começou antes da Medicina. Sou formada em Enfermagem pela Universidade de São Paulo e mestre em Saúde Pública. Essa experiência contribuiu para construir meu olhar sobre o paciente de forma ampla, considerando não apenas a doença, mas também sua história, contexto e necessidades.</p>
