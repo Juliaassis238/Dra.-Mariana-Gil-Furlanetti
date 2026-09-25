@@ -176,7 +176,7 @@
     .value { display: flex; align-items: center; gap: 12px; min-height: 51px; border-bottom: 1px solid var(--line); color: var(--blue); font-size: 11px; font-weight: 600; }
     .value::before { color: var(--clay); content: "—"; }
 
-    /* 6. Tratamentos: lista editorial e sucinta, sem imagens de instrumentos. */
+    /* 6. Tratamentos: lista editorial sucinta, sem imagens fotográficas. */
     .treatments { padding: 88px 0 98px; background: #eee8df; }
     .treatments-intro { display: grid; grid-template-columns: 1fr .76fr; gap: 70px; align-items: end; margin-bottom: 45px; }
     .treatments-intro .section-title { max-width: 8ch; margin-top: 20px; }
@@ -186,18 +186,6 @@
     .treatment-index { color: var(--clay); font-family: var(--serif); font-size: 18px; font-style: italic; }
     .treatment-row h3 { margin: 0; font-size: clamp(22px, 2.1vw, 29px); }
     .treatment-row p { max-width: 47ch; margin: 0; color: #62686a; font-size: 13px; line-height: 1.7; }
-    .treatment-visuals { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 27px 20px; margin-top: 39px; }
-    .treatment-visuals.treatment-relevant { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-    .treatment-visuals figure { grid-column: span 2; min-width: 0; min-height: 0; overflow: visible; background: transparent; }
-    .treatment-visuals figure:nth-child(4) { grid-column: 2 / span 2; }
-    .treatment-visuals figure:nth-child(5) { grid-column: 4 / span 2; }
-    .treatment-visuals img { width: 100%; aspect-ratio: .84; object-fit: cover; border-radius: 0 31% 0 0; transition: transform .7s var(--ease), border-radius .55s var(--ease); }
-    .treatment-visuals figure:nth-child(2) img { border-radius: 38% 0 0 0; }
-    .treatment-visuals figure:nth-child(3) img { border-radius: 0 0 32% 0; }
-    .treatment-visuals figure:nth-child(4) img { border-radius: 30% 0 0 0; }
-    .treatment-visuals figure:nth-child(5) img { border-radius: 0 0 0 32%; }
-    .treatment-visuals figure:hover img { transform: scale(1.025); }
-    .treatment-visuals figcaption { margin: 13px 4px 0; color: var(--blue); font-family: var(--serif); font-size: 16px; line-height: 1.35; }
     .treatment-footer { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-top: 32px; }
     .treatment-footer p { max-width: 48ch; margin: 0; color: #727675; font-size: 11px; line-height: 1.7; }
 
@@ -350,10 +338,6 @@
       .treatment-index { grid-row: span 2; font-size: 15px; }
       .treatment-row h3 { font-size: 22px; }
       .treatment-row p { grid-column: 2; font-size: 12px; }
-      .treatment-visuals, .treatment-visuals.treatment-relevant { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 19px 12px; margin-top: 25px; }
-      .treatment-visuals figure, .treatment-visuals figure:nth-child(4), .treatment-visuals figure:nth-child(5) { grid-column: auto; }
-      .treatment-visuals img { min-height: 0; aspect-ratio: .78; }
-      .treatment-visuals figcaption { margin: 9px 2px 0; font-size: 14px; }
       .treatment-footer { align-items: flex-start; flex-direction: column; gap: 20px; margin-top: 26px; }
       .journal { padding: 88px 0 91px; }
       .journal-grid { grid-template-columns: 1fr; gap: 35px; }
@@ -530,13 +514,6 @@
           <article class="treatment-row reveal"><span class="treatment-index">03</span><h3>Bioestimuladores e bioremodeladores</h3><p>Estímulo de colágeno e melhora da qualidade da pele.</p></article>
           <article class="treatment-row reveal"><span class="treatment-index">04</span><h3>Peelings e procedimentos para qualidade da pele</h3><p>Tratamentos direcionados a manchas, textura e renovação cutânea.</p></article>
           <article class="treatment-row reveal" id="tratamento-capilar"><span class="treatment-index">05</span><h3>Tratamentos capilares</h3><p>Investigação e tratamento das principais causas de queda de cabelo e doenças do couro cabeludo.</p></article>
-        </div>
-        <div class="treatment-visuals treatment-relevant" aria-label="Texturas de pele, fios e couro cabeludo relacionadas aos tratamentos dermatológicos">
-          <figure><img src="assets/treatment-expression-skin-macro.webp" alt="Textura natural da pele em detalhe para o cuidado de linhas de expressão" loading="lazy" decoding="async" width="896" height="1152"><figcaption>Toxina botulínica</figcaption></figure>
-          <figure><img src="assets/treatment-volume-skin-macro.webp" alt="Detalhe da textura da pele para cuidados de proporção e volume" loading="lazy" decoding="async" width="896" height="1152"><figcaption>Preenchimentos</figcaption></figure>
-          <figure><img src="assets/treatment-bioestimuladores-skin-texture.webp" alt="Textura natural de pele madura em detalhe" loading="lazy" decoding="async" width="896" height="1152"><figcaption>Bioestimuladores e bioremodeladores</figcaption></figure>
-          <figure><img src="assets/treatment-peelings-skin-texture.webp" alt="Textura e pigmentação natural da pele em detalhe macro" loading="lazy" decoding="async" width="896" height="1152"><figcaption>Peelings e qualidade da pele</figcaption></figure>
-          <figure><img src="assets/treatment-capilar-scalp-texture.webp" alt="Fios crespos, raízes e couro cabeludo em detalhe macro" loading="lazy" decoding="async" width="896" height="1152"><figcaption>Tratamentos capilares</figcaption></figure>
         </div>
         <div class="treatment-footer reveal"><p>A indicação e a escolha de cada cuidado dependem de avaliação e conversa individualizadas.</p><a class="text-link" href="https://wa.me/551131923843?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20tratamentos." target="_blank" rel="noopener noreferrer">Converse sobre tratamentos</a></div>
       </div>
