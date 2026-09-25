@@ -134,6 +134,14 @@
     .area-item h3 { margin: 8px 0 8px; font-size: clamp(23px, 2.3vw, 31px); line-height: 1.1; }
     .area-item p { max-width: 30ch; margin: 0; color: #596669; font-size: 12px; line-height: 1.75; }
     .area-feature-label { display: inline-block; margin-top: 11px; color: var(--blue); font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .area-details { margin-top: 86px; border-top: 1px solid var(--line); }
+    .area-detail { display: grid; grid-template-columns: 82px minmax(0, .82fr) minmax(0, 1fr); gap: 28px; align-items: start; padding: 34px 0 37px; border-bottom: 1px solid var(--line); }
+    .area-detail-index { color: var(--clay); font-size: 10px; font-weight: 700; letter-spacing: .17em; }
+    .area-detail h3 { margin: 0; color: var(--blue); font-size: clamp(26px, 3vw, 42px); line-height: 1.05; }
+    .area-detail-copy { max-width: 47ch; color: #596669; font-size: 14px; line-height: 1.82; }
+    .area-detail-copy p { margin: 0 0 13px; }
+    .area-detail-link { display: inline-flex; margin-top: 5px; padding-bottom: 7px; border-bottom: 1px solid rgba(36, 72, 85, .45); color: var(--blue); font-size: 9px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .area-detail-link:hover { border-color: var(--clay); color: var(--clay); }
 
     /* 4. Pele Negra: uma seção de destaque, com fotografia em escala ampla. */
     .black-skin { display: grid; min-height: 590px; grid-template-columns: 1.04fr .96fr; color: var(--paper); background: var(--blue); }
@@ -302,6 +310,12 @@
       .area-item h3 { font-size: clamp(20px, 5.8vw, 27px); }
       .area-item p { font-size: 11px; }
       .area-feature-label { font-size: 8px; }
+      .area-details { margin-top: 59px; }
+      .area-detail { grid-template-columns: 42px 1fr; gap: 9px 16px; padding: 25px 0 29px; }
+      .area-detail-index { font-size: 8px; line-height: 1.4; }
+      .area-detail h3 { font-size: clamp(24px, 7vw, 34px); }
+      .area-detail-copy { grid-column: 2; font-size: 12px; line-height: 1.75; }
+      .area-detail-link { font-size: 8px; }
       .black-skin { grid-template-columns: 1fr; }
       .black-image { min-height: 0; height: min(119vw, 550px); }
       .black-image img { object-position: center 32%; }
@@ -440,6 +454,28 @@
               <span class="area-number">04 / ESTÉTICA</span><h3>Dermatologia estética</h3>
               <p>Procedimentos planejados para valorizar a naturalidade, respeitando anatomia, proporções e diferentes fases da vida.</p>
             </a>
+          </article>
+        </div>
+        <div class="area-details" aria-label="Detalhes das áreas de atuação">
+          <article class="area-detail" id="detalhe-clinica">
+            <span class="area-detail-index">01 / CLÍNICA</span>
+            <h3>Dermatologia clínica</h3>
+            <div class="area-detail-copy"><p>Investigação e tratamento de acne, manchas, melasma, dermatites, psoríase, rosácea e outras condições da pele.</p><p>O cuidado começa por uma avaliação individualizada para entender a história da pele e construir um plano seguro e possível para cada pessoa.</p><a class="area-detail-link" href="#tratamentos">Ver tratamentos</a></div>
+          </article>
+          <article class="area-detail" id="detalhe-pele-negra">
+            <span class="area-detail-index">02 / PELE NEGRA</span>
+            <h3>Pele negra</h3>
+            <div class="area-detail-copy"><p>A pele negra possui particularidades que precisam ser consideradas na prevenção, no diagnóstico e no tratamento.</p><p>O atendimento olha com atenção para manchas, acne, inflamações, cicatrizes, alterações de pigmentação e alopecias, respeitando cada tom e cada história.</p><a class="area-detail-link" href="#pele-negra">Conhecer esta atuação</a></div>
+          </article>
+          <article class="area-detail" id="detalhe-cabelos">
+            <span class="area-detail-index">03 / CABELOS</span>
+            <h3>Cabelos e couro cabeludo</h3>
+            <div class="area-detail-copy"><p>A queda de cabelo e as doenças do couro cabeludo podem ter diferentes causas e precisam de investigação cuidadosa.</p><p>A avaliação considera sinais, rotina, histórico e características dos fios para orientar um tratamento direcionado e individualizado.</p><a class="area-detail-link" href="#tratamento-capilar">Ver tratamentos capilares</a></div>
+          </article>
+          <article class="area-detail" id="detalhe-estetica">
+            <span class="area-detail-index">04 / ESTÉTICA</span>
+            <h3>Dermatologia estética</h3>
+            <div class="area-detail-copy"><p>Procedimentos planejados para valorizar características individuais sem apagar aquilo que torna cada rosto único.</p><p>Cada indicação considera anatomia, proporções, segurança e o momento de vida de cada paciente, buscando resultados naturais.</p><a class="area-detail-link" href="#estetica">Conhecer a estética</a></div>
           </article>
         </div>
       </div>
