@@ -91,7 +91,7 @@
     .hero-image { position: absolute; z-index: 0; inset: 0; width: 100%; min-height: 0; max-height: none; overflow: hidden; background: var(--blue-soft); }
     .hero-image::after { position: absolute; inset: 0; border: 0; content: ""; pointer-events: none; }
     .hero-image picture { display: block; width: 100%; height: 100%; }
-    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; background: var(--blue-soft); }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; background: var(--blue-soft); animation: hero-photo-in 1.25s var(--ease) both; }
     .hero-caption { display: none; }
     .principles { display: none; }
     .principles-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
@@ -104,8 +104,10 @@
     .about { padding: 83px 0 104px; }
     .about-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: clamp(42px, 7vw, 96px); align-items: start; }
     .about-heading { position: static; }
-    .about-photo { aspect-ratio: .82; margin: 0 0 27px; overflow: hidden; background: var(--sand); }
-    .about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+    .about-photo { aspect-ratio: .82; margin: 0 0 27px; overflow: hidden; border-radius: 0 0 42% 0; background: var(--sand); transition: border-radius .55s var(--ease); }
+    .about-photo:hover { border-radius: 0 0 18% 0; }
+    .about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; transition: transform .8s var(--ease); }
+    .about-photo:hover img { transform: scale(1.035); }
     .about-heading .section-title { max-width: 9ch; margin-top: 16px; font-size: clamp(38px, 4.2vw, 57px); }
     .about-copy { max-width: 650px; }
     .about-copy p { margin: 0 0 19px; color: #536167; font-size: 15px; line-height: 1.9; }
@@ -119,7 +121,10 @@
     .areas-top .section-copy { max-width: 37ch; margin-bottom: 5px; }
     .area-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 21px; }
     .area-item { min-width: 0; }
-    .area-image { aspect-ratio: .78; overflow: hidden; background: #d6d1c9; }
+    .area-image { aspect-ratio: .78; overflow: hidden; border-radius: 0; background: #d6d1c9; transition: border-radius .55s var(--ease), transform .55s var(--ease); }
+    .area-item:nth-child(2) .area-image { border-radius: 42% 0 0 0; }
+    .area-item:nth-child(3) .area-image { border-radius: 0 0 42% 42%; }
+    .area-item:nth-child(4) .area-image { border-radius: 0 42% 0 0; }
     .area-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
     .area-item:hover .area-image img { transform: scale(1.025); }
     .area-item.feature .area-image { outline: 1px solid rgba(36, 72, 85, .55); outline-offset: 5px; }
@@ -130,7 +135,7 @@
 
     /* 4. Pele Negra: uma seção de destaque, com fotografia em escala ampla. */
     .black-skin { display: grid; min-height: 590px; grid-template-columns: 1.04fr .96fr; color: var(--paper); background: var(--blue); }
-    .black-image { min-height: 590px; overflow: hidden; background: #343438; }
+    .black-image { min-height: 590px; overflow: hidden; border-radius: 0 20% 20% 0; background: #343438; }
     .black-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 32%; }
     .black-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 84px clamp(48px, 8vw, 118px); }
     .black-copy .eyebrow { color: #dfb89c; }
@@ -143,7 +148,8 @@
     /* 5. Estética: posicionamento, imagem de rosto e quatro princípios. */
     .aesthetics { padding: 108px 0 112px; }
     .aesthetics-grid { display: grid; grid-template-columns: 1.04fr .96fr; gap: clamp(50px, 9vw, 130px); align-items: center; }
-    .aesthetics-image { position: relative; min-height: 520px; overflow: hidden; background: var(--sand); }
+    .aesthetics-image { position: relative; min-height: 520px; overflow: hidden; border-radius: 46% 0 46% 0; background: var(--sand); transition: border-radius .6s var(--ease); }
+    .aesthetics-image:hover { border-radius: 20% 0 20% 0; }
     .aesthetics-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 36%; }
     .aesthetics-caption { position: absolute; right: 19px; bottom: 19px; padding: 9px 12px; color: var(--blue); background: var(--paper); font-size: 9px; letter-spacing: .11em; text-transform: uppercase; }
     .aesthetics-copy .section-title { max-width: 9ch; margin: 21px 0 25px; }
@@ -163,8 +169,11 @@
     .treatment-row h3 { margin: 0; font-size: clamp(22px, 2.1vw, 29px); }
     .treatment-row p { max-width: 47ch; margin: 0; color: #62686a; font-size: 13px; line-height: 1.7; }
     .treatment-visuals { display: grid; grid-template-columns: 1.15fr .85fr .85fr; gap: 16px; margin-top: 39px; }
-    .treatment-visuals figure { min-height: 210px; overflow: hidden; background: var(--sand); }
-    .treatment-visuals img { width: 100%; height: 100%; min-height: 210px; object-fit: cover; }
+    .treatment-visuals figure { min-height: 210px; overflow: hidden; border-radius: 0 28% 0 0; background: var(--sand); }
+    .treatment-visuals figure:nth-child(2) { border-radius: 28% 0 0 0; }
+    .treatment-visuals figure:nth-child(3) { border-radius: 0 0 28% 0; }
+    .treatment-visuals img { width: 100%; height: 100%; min-height: 210px; object-fit: cover; transition: transform .8s var(--ease); }
+    .treatment-visuals figure:hover img { transform: scale(1.045); }
     .treatment-footer { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-top: 32px; }
     .treatment-footer p { max-width: 48ch; margin: 0; color: #727675; font-size: 11px; line-height: 1.7; }
 
@@ -175,7 +184,10 @@
     .journal-top .section-copy { max-width: 39ch; }
     .journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
     .journal-card { display: flex; min-width: 0; flex-direction: column; }
-    .journal-photo { aspect-ratio: 1.08; overflow: hidden; background: #ddd2c7; }
+    .journal-photo { aspect-ratio: 1.08; overflow: hidden; border-radius: 0 0 34% 0; background: #ddd2c7; transition: border-radius .55s var(--ease); }
+    .journal-card:nth-child(2) .journal-photo { border-radius: 34% 0 0 0; }
+    .journal-card:nth-child(3) .journal-photo { border-radius: 0 34% 0 0; }
+    .journal-card:hover .journal-photo { border-radius: 0; }
     .journal-photo img { height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
     .journal-card:hover .journal-photo img { transform: scale(1.025); }
     .journal-tag { margin: 18px 0 8px; color: var(--clay); font-size: 9px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
@@ -207,6 +219,16 @@
     .footer-bottom { display: flex; justify-content: space-between; gap: 15px; padding-top: 18px; color: #aeb9b9; font-size: 9px; letter-spacing: .07em; }
     .back-to-top { color: #f1e6d9; }
 
+    @keyframes hero-photo-in { from { opacity: 0; transform: scale(1.06); } to { opacity: 1; transform: scale(1); } }
+    @keyframes hero-copy-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    .hero-copy > * { animation: hero-copy-in .7s var(--ease) both; }
+    .hero-copy > :nth-child(2) { animation-delay: .08s; }
+    .hero-copy > :nth-child(3) { animation-delay: .16s; }
+    .hero-copy > :nth-child(4) { animation-delay: .24s; }
+    .hero-copy > :nth-child(5) { animation-delay: .32s; }
+    .area-item:nth-child(2), .journal-card:nth-child(2) { transition-delay: .08s; }
+    .area-item:nth-child(3), .journal-card:nth-child(3) { transition-delay: .16s; }
+    .area-item:nth-child(4) { transition-delay: .24s; }
     .reveal { opacity: 0; transform: translateY(15px); transition: opacity .55s var(--ease), transform .55s var(--ease); }
     .reveal.is-visible { opacity: 1; transform: translateY(0); }
     @media (prefers-reduced-motion: reduce) {
