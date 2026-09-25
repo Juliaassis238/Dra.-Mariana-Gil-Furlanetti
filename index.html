@@ -49,13 +49,13 @@
     .lede { max-width: 415px; color: #536167; font-size: 16px; line-height: 1.75; }
     .section-title { max-width: 760px; margin: 0; font-size: clamp(40px, 5vw, 66px); line-height: 1.04; }
     .section-copy { max-width: 55ch; color: #586368; font-size: 15px; line-height: 1.82; }
-    .button { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 14px; padding: 0 23px; border: 1px solid var(--blue); color: var(--paper); background: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .06em; transition: color .2s var(--ease), background .2s var(--ease), border .2s var(--ease), transform .2s var(--ease); }
-    .button:hover { border-color: var(--clay); color: #fff; background: var(--clay); transform: translateY(-2px); }
+    .button { position: relative; display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 14px; padding: 0 25px; border: 1px solid var(--blue); border-radius: 2px; color: var(--paper); background: var(--blue); box-shadow: 0 8px 18px rgba(30, 45, 50, .10), inset 0 1px rgba(255, 255, 255, .12); font-size: 10px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; transition: color .22s var(--ease), background .22s var(--ease), border .22s var(--ease), box-shadow .22s var(--ease), transform .22s var(--ease); }
+    .button:hover { border-color: var(--clay); color: #fff; background: var(--clay); box-shadow: 0 12px 24px rgba(117, 75, 60, .18); transform: translateY(-2px); }
     .button:active { transform: scale(.98); }
-    .button-light { color: var(--blue); background: transparent; }
+    .button-light { color: var(--blue); background: transparent; box-shadow: none; }
     .button-light:hover { color: #fff; }
-    .text-link { display: inline-flex; align-items: center; gap: 10px; padding: 0 0 7px; border-bottom: 1px solid currentColor; color: var(--blue); font-size: 12px; font-weight: 700; transition: color .2s ease; }
-    .text-link:hover { color: var(--clay); }
+    .text-link { display: inline-flex; align-items: center; gap: 10px; padding: 0 0 8px; border-bottom: 1px solid rgba(36, 72, 85, .45); color: var(--blue); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; transition: color .2s ease, border-color .2s ease; }
+    .text-link:hover { border-color: var(--clay); color: var(--clay); }
 
     /* A navegação permanece leve e legível em qualquer posição de scroll. */
     .site-header { position: sticky; z-index: 30; top: 0; display: flex; min-height: 78px; align-items: center; justify-content: space-between; padding: 12px max(32px, calc((100vw - var(--measure)) / 2)); border-bottom: 1px solid transparent; background: rgba(245, 242, 237, .96); transition: min-height .22s var(--ease), box-shadow .22s var(--ease), border-color .22s var(--ease); backdrop-filter: blur(14px); }
@@ -68,7 +68,7 @@
     .nav a:not(.button) { position: relative; color: #39474b; font-size: 10px; font-weight: 600; letter-spacing: .07em; }
     .nav a:not(.button)::after { position: absolute; right: 100%; bottom: -7px; left: 0; height: 1px; background: var(--clay); content: ""; transition: right .23s var(--ease); }
     .nav a:not(.button):hover::after { right: 0; }
-    .nav .button { min-height: 40px; padding-inline: 15px; font-size: 9px; }
+    .nav .button { min-height: 38px; padding-inline: 16px; font-size: 8px; letter-spacing: .14em; box-shadow: none; }
     .menu-toggle { display: none; width: 44px; height: 44px; padding: 11px; border: 1px solid var(--line); color: var(--blue); background: var(--paper); }
     .menu-toggle span { display: block; height: 1px; margin: 5px 0; background: currentColor; transition: transform .18s var(--ease); }
 
