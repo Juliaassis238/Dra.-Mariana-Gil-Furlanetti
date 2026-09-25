@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/hero-mariana-desktop.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/hero-mariana-desktop-polished.webp" type="image/webp">
   <style>
     /* Editorial direction: no decorative icons or emoji characters. */
     :root {
@@ -120,6 +120,9 @@
     .areas-top .section-copy { max-width: 37ch; margin-bottom: 5px; }
     .area-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 21px; }
     .area-item { min-width: 0; }
+    .area-link { display: block; height: 100%; color: inherit; }
+    .area-link h3 { transition: color .22s var(--ease); }
+    .area-link:hover h3 { color: var(--clay); }
     .area-image { position: relative; aspect-ratio: .78; overflow: hidden; border-radius: 0; background: #d6d1c9; transition: border-radius .55s var(--ease), transform .55s var(--ease); }
     .area-item:nth-child(2) .area-image { border-radius: 42% 0 0 0; }
     .area-item:nth-child(3) .area-image { border-radius: 0 0 42% 42%; }
@@ -378,7 +381,7 @@
       <figure class="hero-image">
         <picture>
           <source media="(max-width: 740px)" srcset="assets/hero-mariana-mobile.webp">
-          <img src="assets/hero-mariana-desktop.webp" alt="Dra. Mariana Gil Furlanetti em retrato profissional" width="2560" height="1440" fetchpriority="high" decoding="async">
+          <img src="assets/hero-mariana-desktop-polished.webp" alt="Dra. Mariana Gil Furlanetti em retrato profissional" width="2560" height="1440" fetchpriority="high" decoding="async">
         </picture>
         <figcaption class="hero-caption">Ciência · escuta · cuidado</figcaption>
       </figure>
@@ -411,24 +414,32 @@
         </div>
         <div class="area-grid">
           <article class="area-item reveal">
-            <div class="area-image"><img src="assets/ai-texture-peel.webp" alt="Textura natural da pele em fotografia editorial" loading="lazy" decoding="async" width="1100" height="1375"></div>
-            <span class="area-number">01 / CUIDADO DA PELE</span><h3>Dermatologia clínica</h3>
-            <p>Acne, manchas, melasma, dermatites, psoríase, rosácea e outras condições da pele.</p>
+            <a class="area-link" href="#tratamentos" aria-label="Conheça a Dermatologia clínica">
+              <div class="area-image"><img src="assets/ai-texture-peel.webp" alt="Textura natural da pele em fotografia editorial" loading="lazy" decoding="async" width="1100" height="1375"></div>
+              <span class="area-number">01 / CUIDADO DA PELE</span><h3>Dermatologia clínica</h3>
+              <p>Acne, manchas, melasma, dermatites, psoríase, rosácea e outras condições da pele.</p>
+            </a>
           </article>
           <article class="area-item feature reveal">
-            <div class="area-image"><img src="assets/ai-skin-portrait.webp" alt="Pele negra em fotografia editorial" loading="lazy" decoding="async" width="1100" height="1375"></div>
-            <span class="area-number">02 / PELE NEGRA</span><h3>Pele negra</h3>
-            <p>Cuidado dermatológico considerando as particularidades, necessidades e características de cada pele.</p><span class="area-feature-label">Uma área de destaque</span>
+            <a class="area-link" href="#pele-negra" aria-label="Conheça o atendimento para Pele negra">
+              <div class="area-image"><img src="assets/ai-skin-portrait.webp" alt="Pele negra em fotografia editorial" loading="lazy" decoding="async" width="1100" height="1375"></div>
+              <span class="area-number">02 / PELE NEGRA</span><h3>Pele negra</h3>
+              <p>Cuidado dermatológico considerando as particularidades, necessidades e características de cada pele.</p><span class="area-feature-label">Uma área de destaque</span>
+            </a>
           </article>
           <article class="area-item reveal">
-            <div class="area-image"><img src="assets/ai-hair-editorial.webp" alt="Cabelos e couro cabeludo em fotografia editorial" loading="lazy" decoding="async" width="1100" height="1375"></div>
-            <span class="area-number">03 / CABELOS</span><h3>Cabelos e couro cabeludo</h3>
-            <p>Investigação e tratamento das principais causas de queda de cabelo e doenças do couro cabeludo.</p>
+            <a class="area-link" href="#tratamentos" aria-label="Conheça os tratamentos para cabelos e couro cabeludo">
+              <div class="area-image"><img src="assets/ai-hair-editorial.webp" alt="Cabelos e couro cabeludo em fotografia editorial" loading="lazy" decoding="async" width="1100" height="1375"></div>
+              <span class="area-number">03 / CABELOS</span><h3>Cabelos e couro cabeludo</h3>
+              <p>Investigação e tratamento das principais causas de queda de cabelo e doenças do couro cabeludo.</p>
+            </a>
           </article>
           <article class="area-item reveal">
-            <div class="area-image"><img src="assets/ai-natural-aesthetics.webp" alt="Beleza natural em fotografia editorial" loading="lazy" decoding="async" width="1100" height="1375"></div>
-            <span class="area-number">04 / ESTÉTICA</span><h3>Dermatologia estética</h3>
-            <p>Procedimentos planejados para valorizar a naturalidade, respeitando anatomia, proporções e diferentes fases da vida.</p>
+            <a class="area-link" href="#estetica" aria-label="Conheça a Dermatologia estética">
+              <div class="area-image"><img src="assets/ai-natural-aesthetics.webp" alt="Beleza natural em fotografia editorial" loading="lazy" decoding="async" width="1100" height="1375"></div>
+              <span class="area-number">04 / ESTÉTICA</span><h3>Dermatologia estética</h3>
+              <p>Procedimentos planejados para valorizar a naturalidade, respeitando anatomia, proporções e diferentes fases da vida.</p>
+            </a>
           </article>
         </div>
       </div>
