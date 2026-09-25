@@ -73,14 +73,14 @@
     .menu-toggle span { display: block; height: 1px; margin: 5px 0; background: currentColor; transition: transform .18s var(--ease); }
 
     /* 1. Hero: nome, posicionamento e retrato fornecido no próprio briefing. */
-    .hero { display: grid; min-height: min(770px, calc(100svh - 78px)); grid-template-columns: .92fr 1.08fr; align-items: stretch; }
+    .hero { display: grid; min-height: 620px; grid-template-columns: .92fr 1.08fr; align-items: stretch; }
     .hero-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 72px max(48px, calc((100vw - var(--measure)) / 2)) 76px max(48px, calc((100vw - var(--measure)) / 2)); padding-right: clamp(36px, 6vw, 94px); }
     .hero h1 { max-width: 8.5ch; font-size: clamp(57px, 6vw, 84px); }
     .hero-role { margin: 0 0 21px; color: var(--clay); font-size: 12px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
     .hero .lede { max-width: 390px; }
     .hero .button { margin-top: 18px; }
     .hero-note { margin: 34px 0 0; color: #768083; font-size: 10px; letter-spacing: .08em; }
-    .hero-image { position: relative; min-height: 630px; max-height: 780px; overflow: hidden; background: var(--blue-soft); }
+    .hero-image { position: relative; min-height: 620px; max-height: 650px; overflow: hidden; background: var(--blue-soft); }
     .hero-image::after { position: absolute; inset: 0; border: 14px solid rgba(245, 242, 237, .22); content: ""; pointer-events: none; }
     .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 38%; }
     .hero-caption { position: absolute; right: 24px; bottom: 24px; z-index: 1; padding: 10px 13px; color: var(--blue); background: rgba(245, 242, 237, .93); font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
@@ -92,7 +92,7 @@
     .principles-list span + span::before { margin-right: 35px; color: #c49b80; content: "·"; }
 
     /* 2. Sobre a médica: trajetória completa em leitura confortável. */
-    .about { padding: 150px 0 144px; }
+    .about { padding: 108px 0 112px; }
     .about-grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: clamp(60px, 11vw, 166px); align-items: start; }
     .about-heading { position: sticky; top: 125px; }
     .about-heading .section-title { max-width: 8.5ch; margin-top: 23px; }
@@ -102,7 +102,7 @@
     .about-note { margin-top: 35px; padding-top: 23px; border-top: 1px solid var(--line); color: #718082; font-size: 12px; line-height: 1.7; }
 
     /* 3. Áreas de atuação: retratos grandes, sem caixas coloridas. */
-    .areas { padding: 122px 0 134px; background: #e8eeeb; }
+    .areas { padding: 94px 0 104px; background: #e8eeeb; }
     .areas-top { display: flex; align-items: end; justify-content: space-between; gap: 50px; margin-bottom: 57px; }
     .areas-top .section-title { max-width: 10ch; margin-top: 20px; }
     .areas-top .section-copy { max-width: 37ch; margin-bottom: 5px; }
@@ -118,8 +118,8 @@
     .area-feature-label { display: inline-block; margin-top: 11px; color: var(--blue); font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 
     /* 4. Pele Negra: uma seção de destaque, com fotografia em escala ampla. */
-    .black-skin { display: grid; min-height: 700px; grid-template-columns: 1.04fr .96fr; color: var(--paper); background: var(--blue); }
-    .black-image { min-height: 700px; overflow: hidden; background: #343438; }
+    .black-skin { display: grid; min-height: 590px; grid-template-columns: 1.04fr .96fr; color: var(--paper); background: var(--blue); }
+    .black-image { min-height: 590px; overflow: hidden; background: #343438; }
     .black-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 32%; }
     .black-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 84px clamp(48px, 8vw, 118px); }
     .black-copy .eyebrow { color: #dfb89c; }
@@ -130,9 +130,9 @@
     .black-footnote { margin-top: 26px; color: rgba(245, 242, 237, .58); font-size: 10px; line-height: 1.65; }
 
     /* 5. Estética: posicionamento, imagem de rosto e quatro princípios. */
-    .aesthetics { padding: 145px 0 135px; }
+    .aesthetics { padding: 108px 0 112px; }
     .aesthetics-grid { display: grid; grid-template-columns: 1.04fr .96fr; gap: clamp(50px, 9vw, 130px); align-items: center; }
-    .aesthetics-image { position: relative; min-height: 600px; overflow: hidden; background: var(--sand); }
+    .aesthetics-image { position: relative; min-height: 520px; overflow: hidden; background: var(--sand); }
     .aesthetics-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 36%; }
     .aesthetics-caption { position: absolute; right: 19px; bottom: 19px; padding: 9px 12px; color: var(--blue); background: var(--paper); font-size: 9px; letter-spacing: .11em; text-transform: uppercase; }
     .aesthetics-copy .section-title { max-width: 9ch; margin: 21px 0 25px; }
@@ -142,7 +142,7 @@
     .value::before { color: var(--clay); content: "—"; }
 
     /* 6. Tratamentos: lista editorial e sucinta, sem imagens de instrumentos. */
-    .treatments { padding: 115px 0 128px; background: #eee8df; }
+    .treatments { padding: 88px 0 98px; background: #eee8df; }
     .treatments-intro { display: grid; grid-template-columns: 1fr .76fr; gap: 70px; align-items: end; margin-bottom: 45px; }
     .treatments-intro .section-title { max-width: 8ch; margin-top: 20px; }
     .treatments-intro .section-copy { margin-bottom: 4px; }
@@ -155,7 +155,7 @@
     .treatment-footer p { max-width: 48ch; margin: 0; color: #727675; font-size: 11px; line-height: 1.7; }
 
     /* 7. Conteúdo: três imagens como páginas de revista, links para os canais reais. */
-    .journal { padding: 139px 0 146px; }
+    .journal { padding: 106px 0 116px; }
     .journal-top { display: flex; align-items: end; justify-content: space-between; gap: 45px; margin-bottom: 53px; }
     .journal-top .section-title { max-width: 10ch; margin-top: 19px; }
     .journal-top .section-copy { max-width: 39ch; }
@@ -170,7 +170,7 @@
     .journal-action { display: flex; justify-content: center; margin-top: 52px; }
 
     /* 8. Agendamento: poucas palavras, WhatsApp e dados completos. */
-    .appointment { display: grid; min-height: 520px; grid-template-columns: 1fr .82fr; align-items: center; gap: 80px; padding: 82px max(48px, calc((100vw - var(--measure)) / 2)); background: var(--blue-soft); }
+    .appointment { display: grid; min-height: 430px; grid-template-columns: 1fr .82fr; align-items: center; gap: 80px; padding: 68px max(48px, calc((100vw - var(--measure)) / 2)); background: var(--blue-soft); }
     .appointment-main .section-title { max-width: 8ch; margin: 18px 0 17px; font-size: clamp(45px, 5.4vw, 76px); }
     .appointment-main > p { max-width: 43ch; color: #516064; font-size: 14px; line-height: 1.8; }
     .appointment-main .button { margin-top: 17px; }
