@@ -106,14 +106,11 @@
     .about-photo { position: relative; aspect-ratio: .82; margin: 0 0 27px; overflow: hidden; border-radius: 0 0 42% 0; background: var(--sand); transition: border-radius .55s var(--ease); }
     .about-photo:hover { border-radius: 0 0 18% 0; }
     .about-photo-main { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; transition: transform .8s var(--ease); }
-    .about-photo-secondary { position: absolute; z-index: 2; right: 4%; bottom: 6%; width: 42%; height: auto; aspect-ratio: 3 / 4; border: 6px solid var(--paper); object-fit: cover; object-position: center 25%; box-shadow: 0 12px 28px rgba(30, 45, 50, .18); transition: transform .55s var(--ease); }
     .about-photo:hover .about-photo-main { transform: scale(1.035); }
-    .about-photo:hover .about-photo-secondary { transform: translateY(-4px); }
     .about-heading .section-title { max-width: 9ch; margin-top: 16px; font-size: clamp(38px, 4.2vw, 57px); }
     .about-copy { max-width: 650px; }
     .about-copy p { margin: 0 0 19px; color: #536167; font-size: 15px; line-height: 1.9; }
     .about-copy .opening { margin-bottom: 25px; color: var(--blue); font-family: var(--serif); font-size: clamp(25px, 2.8vw, 37px); line-height: 1.35; }
-    .about-note { margin-top: 35px; padding-top: 23px; border-top: 1px solid var(--line); color: #718082; font-size: 12px; line-height: 1.7; }
 
     /* 3. Áreas de atuação: retratos grandes, sem caixas coloridas. */
     .areas { padding: 94px 0 104px; background: #e8eeeb; }
@@ -202,6 +199,9 @@
     .appointment-main > p { max-width: 43ch; color: #516064; font-size: 14px; line-height: 1.8; }
     .appointment-main .button { margin-top: 17px; }
     .appointment-details { align-self: end; justify-self: end; width: min(100%, 390px); padding-top: 24px; border-top: 1px solid rgba(36, 72, 85, .3); }
+    .appointment-doctor { aspect-ratio: 1; margin: 0 0 19px; overflow: hidden; border-radius: 0 18% 0 0; background: var(--paper); }
+    .appointment-doctor img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .appointment-note { margin: 0 0 22px; padding: 0 0 20px; border-bottom: 1px solid rgba(36, 72, 85, .22); color: var(--blue); font-family: var(--serif); font-size: 19px; line-height: 1.55; }
     .detail-label { display: block; margin: 17px 0 7px; color: var(--clay); font-size: 9px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
     .appointment-details p { margin: 0; color: var(--blue); font-size: 13px; line-height: 1.75; }
     .appointment-details .phone { font-family: var(--serif); font-size: 22px; }
@@ -285,7 +285,6 @@
       .about-heading .section-title { max-width: 10ch; margin-top: 14px; }
       .about-copy .opening { font-size: 27px; }
       .about-copy p { font-size: 14px; line-height: 1.83; }
-      .about-note { margin-top: 25px; }
       .areas { padding: 83px 0 91px; }
       .areas-top, .journal-top { align-items: flex-start; flex-direction: column; gap: 17px; margin-bottom: 37px; }
       .areas-top .section-title, .journal-top .section-title { max-width: 11ch; margin-top: 14px; }
@@ -388,7 +387,7 @@
     <!-- 2 · Sobre Mariana -->
     <section class="about" id="sobre" aria-labelledby="about-title">
       <div class="wrap about-grid">
-        <div class="about-heading reveal"><figure class="about-photo"><img class="about-photo-main" src="assets/mariana-about-new.webp" alt="Dra. Mariana Gil Furlanetti em retrato profissional" loading="lazy" decoding="async" width="1086" height="1448"><img class="about-photo-secondary" src="assets/mariana-portrait-office.webp" alt="Dra. Mariana Gil Furlanetti em seu consultório, ao lado de livros de dermatologia" loading="lazy" decoding="async" width="1086" height="1448"></figure><span class="eyebrow">Sobre Mariana</span><h2 class="section-title" id="about-title">Dermatologia para além do diagnóstico.</h2></div>
+        <div class="about-heading reveal"><figure class="about-photo"><img class="about-photo-main" src="assets/mariana-about-new.webp" alt="Dra. Mariana Gil Furlanetti em retrato profissional" loading="lazy" decoding="async" width="1086" height="1448"></figure><span class="eyebrow">Sobre Mariana</span><h2 class="section-title" id="about-title">Dermatologia para além do diagnóstico.</h2></div>
         <div class="about-copy reveal">
           <p class="opening">Cuidar da pele começa por escutar a história de cada pessoa.</p>
           <p>Minha trajetória na saúde começou antes da Medicina. Sou formada em Enfermagem pela Universidade de São Paulo e mestre em Saúde Pública. Essa experiência contribuiu para construir meu olhar sobre o paciente de forma ampla, considerando não apenas a doença, mas também sua história, contexto e necessidades.</p>
@@ -396,7 +395,6 @@
           <p>Essa área ocupa um lugar especial na minha prática. A diversidade dos tons de pele exige conhecimento, atenção aos detalhes e compreensão das particularidades de cada paciente. Minha atuação também está ligada ao ensino, à pesquisa e à assistência em serviços públicos, incluindo o Ambulatório de Pele Étnica do Hospital Ipiranga.</p>
           <p>No consultório, uno a dermatologia clínica aos procedimentos estéticos de forma individualizada. Acredito que estética não deve apagar características ou transformar rostos, mas acompanhar cada pessoa em suas diferentes fases da vida, respeitando anatomia, proporções e naturalidade.</p>
           <p>Meu objetivo é oferecer uma dermatologia baseada em evidência científica, escuta e cuidado individualizado, para que cada paciente compreenda sua pele e encontre um tratamento que faça sentido para sua história.</p>
-          <p class="about-note">Atendimento dermatológico com tempo para ouvir, orientar e construir um plano de cuidado com você.</p>
         </div>
       </div>
     </section>
@@ -520,6 +518,8 @@
         <a class="button" href="https://wa.me/551131923843" target="_blank" rel="noopener noreferrer">Agendar consulta</a>
       </div>
       <div class="appointment-details reveal">
+        <figure class="appointment-doctor"><img src="assets/mariana-portrait-office.webp" alt="Dra. Mariana Gil Furlanetti em seu consultório" loading="lazy" decoding="async" width="1086" height="1448"></figure>
+        <p class="appointment-note">Atendimento dermatológico com tempo para ouvir, orientar e construir um plano de cuidado com você.</p>
         <span class="detail-label">Falar pelo WhatsApp</span>
         <p class="phone"><a href="https://wa.me/551131923843" target="_blank" rel="noopener noreferrer">+55 11 3192-3843</a></p>
         <span class="detail-label">Atendimento</span>
